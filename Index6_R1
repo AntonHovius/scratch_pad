@@ -1,5 +1,5 @@
 #!/bin/bash -e
-#SBATCH --job-name=I6_3_R1_4x4
+#SBATCH --job-name=I6_3_R1_72h
 #SBATCH --account=vuw03877
 #SBATCH --output=output/%x.%j.out
 #SBATCH --error=output/%x.%j.err
