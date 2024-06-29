@@ -1,4 +1,4 @@
-# links and such
+# :potato: links and such :potato:
 
 ## NeSI
 
