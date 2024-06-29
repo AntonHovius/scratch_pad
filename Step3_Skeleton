@@ -20,6 +20,7 @@ module load ipyrad/0.9.85-gimkl-2022a-Python-3.10.5
 # Call ipyrad with the specified parameter file and additional options
 ipyrad -p params-platycerium_R1_.txt -s 3 -c <NUM_SAMPLES> -t 1
 
+POOPS SO BIG I GAVE MYSELF A PANIC ATTACK <3
 
 # or
 <ipyrad -p params-platycerium_R2_.txt -s 3 -c <NUM_SAMPLES> -t 1>
