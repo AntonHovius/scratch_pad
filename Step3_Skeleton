@@ -1,0 +1,25 @@
+#!/bin/bash -e
+#SBATCH --job-name= <INDEX_NUM_STEP_{R1 / R2}_72h>
+#SBATCH --account=vuw03877
+#SBATCH --output=output/%x.%j.out
+#SBATCH --error=output/%x.%j.err
+#SBATCH --time=72:00:00
+#SBATCH --mem=128G
+#SBATCH --ntasks=1
+#SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task= <NUM_SAMPLES>
+#SBATCH --partition=bigmem
+
+# Change into the directory where data and parameter files are located
+cd ~/nobackup/2Blue.Plat.data/<INDEX_NUM>
+
+# Load the ipyrad module
+module purge
+module load ipyrad/0.9.85-gimkl-2022a-Python-3.10.5
+
+# Call ipyrad with the specified parameter file and additional options
+ipyrad -p params-platycerium_R1_.txt -s 3 -c <NUM_SAMPLES> -t 1
+
+
+# or
+<ipyrad -p params-platycerium_R2_.txt -s 3 -c <NUM_SAMPLES> -t 1>
